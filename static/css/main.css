@@ -1,0 +1,11 @@
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+button {
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
