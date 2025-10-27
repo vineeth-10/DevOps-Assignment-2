@@ -36,7 +36,7 @@ pipeline {
                         bat """
                         set KUBECONFIG=%KUBECONFIG_FILE%
                         kubectl set image deployment/devops-assignment-2-app ^
-                        devops-assignment-2-app=${DOCKER_IMAGE}:${DOCKER_TAG} ^
+                        devops-assignment-2-app=${DOCKER_IMAGE}:${env.BUILD_NUMBER} ^
                         --record
         
                         kubectl rollout status deployment/devops-assignment-2-app --timeout=300s
