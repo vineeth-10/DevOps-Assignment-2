@@ -4,6 +4,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
         DOCKER_IMAGE = 'nitheeshabr/devops-assignment-2-app'
         GIT_REPO = 'https://github.com/Bnitheesha/DevOps-Assignment-2.git'
+        KUBECONFIG = credentials('kubeconfig')
     }
     stages {
         stage('Checkout Code') {
@@ -30,13 +31,23 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat '''
-                kubectl apply -f k8s/deployment.yaml
-                kubectl apply -f k8s/service.yaml
-                '''
+                script {
+                    withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG_FILE')]) {
+                        bat """
+                        set KUBECONFIG=%KUBECONFIG_FILE%
+                        kubectl set image deployment/devops-assignment-2-app ^
+                        devops-assignment-2-app=${DOCKER_IMAGE}:${DOCKER_TAG} ^
+                        --record
+        
+                        kubectl rollout status deployment/devops-assignment-2-app --timeout=300s
+        
+                        kubectl get pods -l app=devops-assignment-2-app
+                        kubectl get services -l app=devops-assignment-2-app
+                        """
+                    }
+                }
             }
         }
-    }
     post {
         always {
             cleanWs()
