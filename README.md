@@ -51,7 +51,7 @@ DevOps-Assignment-2/
 
 ### 1. Clone the repo
 
-git clone https://github.com/Bnitheesha/DevOps-Assignment-2.git
+git clone https://github.com/vineeth-10/DevOps-Assignment-2.git
 cd DevOps-Assignment-2
 
 
