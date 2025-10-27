@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_IMAGE = 'nitheeshabr/devops-assignment-2-app'
-        GIT_REPO = 'https://github.com/Bnitheesha/DevOps-Assignment-2.git'
+        DOCKER_IMAGE = 'GVineeth/devops-assignment-2-app'
+        GIT_REPO = 'https://github.com/vineeth-10/DevOps-Assignment-2'
         KUBECONFIG = credentials('kubeconfig')
     }
     stages {

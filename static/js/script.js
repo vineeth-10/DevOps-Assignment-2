@@ -1,4 +1,5 @@
-function showGreet() {
-    document.getElementById('greet').innerText = "Hello, Nitheesha!";
-    document.getElementById('greet').style.display = "block";
-}
+document.getElementById('greet-btn').addEventListener('click', () => {
+    const greetEl = document.getElementById('greet');
+    greetEl.textContent = "Hello! Welcome to the Ticket Booking App 🎟️";
+    greetEl.classList.remove('hidden');
+});

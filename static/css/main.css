@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
 body {
-    font-family: 'Inter', 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-button {
-    transition: transform 0.1s;
-}
-
-button:active {
-    transform: scale(0.98);
+.text-gradient {
+    background: linear-gradient(90deg, #6b46c1, #b83280);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
