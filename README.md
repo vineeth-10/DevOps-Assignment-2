@@ -2,7 +2,7 @@
 
 Welcome to the **Ticket Booking Web App** — a modern web application built with Python (Flask), fully containerized with Docker, integrated with Jenkins CI/CD, and orchestrated using Kubernetes.
 
-**Developer:** Nitheesha
+**Developer:** Gvineeth
 
 ---
 
@@ -15,24 +15,24 @@ DevOps-Assignment-2/
 ├── Jenkinsfile
 ├── README.md
 ├── k8s/
-│   ├── deployment.yaml
-│   └── service.yaml
+│ ├── deployment.yaml
+│ └── service.yaml
 ├── static/
-│   ├── css/
-│   │   └── main.css
-│   └── js/
-│       └── script.js
+│ ├── css/
+│ │ └── main.css
+│ └── js/
+│ └── script.js
 ├── templates/
-│   └── index.html
+│ └── index.html
 ├── .gitignore
 ├── .dockerignore
 ├── screenshots/
-│   ├── github-repo.png
-│   ├── jenkins-pipeline-configure.png
-│   ├── jenkins-ci-cd.png
-│   ├── dockerhub-image.png
-│   ├── kubernetes-pods.png
-│   └── application-interface.png
+│ ├── github-repo.png
+│ ├── jenkins-pipeline-configure.png
+│ ├── jenkins-ci-cd.png
+│ ├── dockerhub-image.png
+│ ├── kubernetes-pods.png
+│ └── application-interface.png
 
 
 ---
@@ -54,7 +54,9 @@ DevOps-Assignment-2/
 git clone https://github.com/Bnitheesha/DevOps-Assignment-2.git
 cd DevOps-Assignment-2
 
+
 ### 2. Run Locally With Flask
+
 pip install -r requirements.txt
 python app.py
 
@@ -62,11 +64,13 @@ python app.py
 Visit [http://localhost:8000](http://localhost:8000)
 
 ### 3. Build and Push Docker Image
-docker build -t nitheeshabr/devops-assignment-2-app .
-docker push nitheeshabr/devops-assignment-2-app:latest
+
+docker build -t gvineeth/devops-assignment-2-app .
+docker push gvineeth/devops-assignment-2-app:latest
 
 
 ### 4. Start Kubernetes Cluster (Minikube)
+
 minikube start
 kubectl apply -f k8s/
 kubectl get pods,svc
@@ -110,7 +114,7 @@ _Add screenshots of UI, Jenkins pipeline, DockerHub repo, and K8s dashboard here
 
 ## 🪄 Credits
 
-Created by **Nitheesha**  
+Created by **Gvineeth**   
 DevOps Assignment, 2025
 
 ---
@@ -118,3 +122,5 @@ DevOps Assignment, 2025
 ## 📝 License
 
 This project is for academic purposes.
+This README.md reflects all developer references updated to Gvineeth, along with instructions consistent with your project and deployment flow.
+
